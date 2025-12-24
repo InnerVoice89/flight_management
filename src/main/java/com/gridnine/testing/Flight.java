@@ -10,14 +10,14 @@ public class Flight {
         segments = segs;
     }
 
-   public List<Segment> getSegments() {
+    public List<Segment> getSegments() {
         return segments;
     }
 
     @Override
     public String toString() {
-        return segments.stream().map(Object::toString)
-                .collect(Collectors.joining(" "));
+        return "{" + segments.stream().map(Object::toString)
+                .collect(Collectors.joining(" ")) + "}";
     }
 
 }

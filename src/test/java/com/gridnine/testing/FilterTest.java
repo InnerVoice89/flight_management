@@ -27,7 +27,7 @@ public class FilterTest {
     @Test
     public void testUpOnCurrentTimeFilter() {
         filter = new UpToCurrentTimeFilter();
-        Flight flight = new Flight(Arrays.asList(new Segment(threeDaysFromNow.plusDays(6), threeDaysFromNow)));
+        Flight flight = new Flight(Arrays.asList(new Segment(threeDaysFromNow.minusDays(6), threeDaysFromNow)));
         boolean res = filter.filter(flight);
         assertFalse(res);
     }
